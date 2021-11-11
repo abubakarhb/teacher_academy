@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 10, 2021 at 04:50 PM
+-- Generation Time: Nov 11, 2021 at 12:45 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.4.20
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `tap_academy`
+-- Database: `teacher-academy`
 --
 
 -- --------------------------------------------------------
@@ -278,15 +278,19 @@ CREATE TABLE `students` (
   `phone` varchar(20) NOT NULL,
   `location` varchar(100) NOT NULL,
   `city` varchar(200) NOT NULL,
-  `org_id` int(11) NOT NULL
+  `org` varchar(500) NOT NULL,
+  `job_title` varchar(50) NOT NULL,
+  `position` varchar(50) NOT NULL,
+  `photo` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `students`
 --
 
-INSERT INTO `students` (`id`, `fullname`, `email`, `password`, `phone`, `location`, `city`, `org_id`) VALUES
-(1, 'Abubakar Hussaini', 'abu@gmail.com', '12345', '09053447098', 'Kano', 'Nasarawa', 0);
+INSERT INTO `students` (`id`, `fullname`, `email`, `password`, `phone`, `location`, `city`, `org`, `job_title`, `position`, `photo`) VALUES
+(1, 'Abubakar Hussaini', 'abu@gmail.com', '12345', '09053447098', 'Kano', 'Nasarawa', '0', '', '', ''),
+(2, 'Ismail Ummi', 'ummi@me.com', '12345', '234567890', 'Kano', 'Nasarawa', 'Prime College', 'Class Teacher', 'ICT Teacher', 'sjdlsddjlsdfljdfljcjsdflj');
 
 --
 -- Indexes for dumped tables
@@ -438,7 +442,7 @@ ALTER TABLE `scored_quiz`
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
