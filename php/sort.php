@@ -18,6 +18,8 @@ function checkDB()
 }
 function regA($all)
 {
+    // echo"<pre>";
+    // echo json_encode($_GET);
     // print_r($_GET);
     //echo $admin_name;
     $fname = $_GET['fname'];

@@ -136,124 +136,197 @@ nav.innerHTML +=`
             <a class="nav-link"  data-bs-target="#login-modal" data-bs-toggle="modal">
               Login
             </a>
-  <div class="modal fade" id="login-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="closeModal()"></button>
-        </div>
-        <div class="modal-body">
-            <div class="container-fluid">
-              <div class="row">
-                <nav>
-                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                      <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Sign up</button>
-                      <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Log in</button>
+            <div class="modal fade" id="login-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="closeModal()"></button>
+                  </div>
+                  <div class="modal-body">
+                      <div class="container-fluid">
+                        <div class="row">
+                          <nav>
+                              <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Sign up</button>
+                                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Log in</button>
+                              </div>
+                            </nav>
+                            <div class="tab-content" id="nav-tabContent">
+                              <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                  <form class="signupForm">
+                                      <div class="input-group mb-3">
+                                          <span class="input-group-text" id="basic-addon1"><i class="far fa-user"></i></span>
+                                          <input type="text" class="form-control fname" placeholder="First & Last name" required>
+                                        </div>
+                                        <div class="input-group mb-3">
+                                          <span class="input-group-text" id="basic-addon1"><i class="far fa-envelope"></i></span>
+                                          <input type="email" class="form-control email" placeholder="Email" required>
+                                        </div>
+                                        <div class="input-group mb-3">
+                                          <span class="input-group-text" id="basic-addon1"><i class="fas fa-phone"></i></span>
+                                          <input type="text" class="form-control phone" placeholder="Phone Number" required>
+                                        </div>
+                                        <div class="input-group mb-3">
+                                          <span class="input-group-text" id="basic-addon1"><i class="fas fa-globe"></i></span>
+                                          <select class="form-select loc" placeholder="State" required>
+                                          <option disabled selected>Select State</option>
+                                          <option value="Abia">Abia</option>
+                                          <option value="Adamawa">Adamawa</option>
+                                          <option value="Akwa Ibom">Akwa Ibom</option>
+                                          <option value="Anambra">Anambra</option>
+                                          <option value="Bauchi">Bauchi</option>
+                                          <option value="Bayelsa">Bayelsa</option>
+                                          <option value="Benue">Benue</option>
+                                          <option value="Borno">Borno</option>
+                                          <option value="Cross Rive">Cross River</option>
+                                          <option value="Delta">Delta</option>
+                                          <option value="Ebonyi">Ebonyi</option>
+                                          <option value="Edo">Edo</option>
+                                          <option value="Ekiti">Ekiti</option>
+                                          <option value="Enugu">Enugu</option>
+                                          <option value="FCT">Federal Capital Territory</option>
+                                          <option value="Gombe">Gombe</option>
+                                          <option value="Imo">Imo</option>
+                                          <option value="Jigawa">Jigawa</option>
+                                          <option value="Kaduna">Kaduna</option>
+                                          <option value="Kano">Kano</option>
+                                          <option value="Katsina">Katsina</option>
+                                          <option value="Kebbi">Kebbi</option>
+                                          <option value="Kogi">Kogi</option>
+                                          <option value="Kwara">Kwara</option>
+                                          <option value="Lagos">Lagos</option>
+                                          <option value="Nasarawa">Nasarawa</option>
+                                          <option value="Niger">Niger</option>
+                                          <option value="Ogun">Ogun</option>
+                                          <option value="Ondo">Ondo</option>
+                                          <option value="Osun">Osun</option>
+                                          <option value="Oyo">Oyo</option>
+                                          <option value="Plateau">Plateau</option>
+                                          <option value="Rivers">Rivers</option>
+                                          <option value="Sokoto">Sokoto</option>
+                                          <option value="Taraba">Taraba</option>
+                                          <option value="Yobe">Yobe</option>
+                                          <option value="Zamfara">Zamfara</option>
+                                          </select>
+                                        </div>
+                                        <div class="input-group mb-3">
+                                          <span class="input-group-text" id="basic-addon1"><i class="fas fa-map-marker-alt"></i></span>
+                                          <input type="text" class="form-control city" placeholder="Address" required>
+                                        </div>
+                                        <div class="input-group mb-3">
+                                          <span class="input-group-text" id="basic-addon1"><i class="fas fa-school"></i></span>
+                                          <select class="form-select orgId" placeholder="School" required>
+                                            <option disabled selected>Select School</option>
+                                            <option value="Prime College">Prime College</option>
+                                            <option value="Sweet Haven">Sweet Haven</option>
+                                          </select>
+                                        </div>
+                                        <div class="input-group mb-3">
+                                          <span class="input-group-text" id="basic-addon1"><i class="fas fa-briefcase"></i></span>
+                                          <input type="text" class="form-control jobTitle" placeholder="Job Title" required>
+                                        </div>
+                                        <div class="input-group mb-3">
+                                          <span class="input-group-text" id="basic-addon1"><i class="fas fa-briefcase"></i></span>
+                                          <input type="text" class="form-control jobPosition" placeholder="Job Position" required>
+                                        </div>
+                                        <div class="input-group mb-3">
+                                          <label for="upload" class="sr-only">profile picture</label>
+                                          <span class="input-group-text" id="basic-addon1"><i class="far fa-address-card"></i></span>
+                                          <input type="file" class="form-control photo" placeholder="profile picture" required>
+                                        </div>
+                                        <div class="input-group mb-3">
+                                          <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
+                                          <input type="password" class="form-control pwd" placeholder="Your password" required>
+                                        </div>
+                                        <div class="loading-box"></div>
+                                      <button type="submit" class="btn btn-primary" id="createAccount">Create An Account</button>
+                                    </form>
+                                    <div class="social-media">
+                                    <h1 class="label-text">or connect with</h1>
+                                    </div>
+                                    <div class="social-media-icon">
+                                      <ul class="social-icons mt-3">
+                                          <li class="social-icons-list">
+                                              <a href="" class="social-icon">
+                                                  <i class="fab fa-linkedin-in"></i>
+                                              </a>
+                                          </li>
+                                          <li class="social-icons-list">
+                                              <a href="" class="social-icon">
+                                                  <i class="fab fa-facebook"></i>
+                                              </a>
+                                          </li>
+                                          <li class="social-icons-list">
+                                              <a href="" class="social-icon">
+                                                  <i class="fab fa-twitter"></i>
+                                              </a>
+                                          </li>
+                                          <li class="social-icons-list">
+                                              <a href="" class="social-icon">
+                                                  <i class="fab fa-instagram"></i>
+                                              </a>
+                                          </li>
+                                      </ul>
+                                    </div>
+                              </div>
+                              <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                  <form>
+                                        <div class="input-group mb-3">
+                                          <span class="input-group-text" id="basic-addon1"><i class="far fa-envelope"></i></span>
+                                          <input type="text" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1" required>
+                                        </div>
+                                        <div class="input-group mb-3">
+                                          <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
+                                          <input type="text" class="form-control" placeholder="Your password" aria-label="Username" aria-describedby="basic-addon1" required>
+                                        </div>
+                                      <div class="d-flex justify-content-space-between">
+                                      <div class="mb-3">
+                                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                          <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                                        </div>
+                                        <div class="mb-3 form-check" style="margin-left: 5rem !important;">
+                                          <a href="">Forget your password</a>
+                                        </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-secondary">Log In</button>
+                                    </form>
+                                    <div class="social-media">
+                                    <h1 class="label-text">or connect with</h1>
+                                    </div>
+                                    <div class="social-media-icon">
+                                      <ul class="social-icons mt-3">
+                                          <li class="social-icons-list">
+                                              <a href="" class="social-icon">
+                                                  <i class="fab fa-linkedin-in"></i>
+                                              </a>
+                                          </li>
+                                          <li class="social-icons-list">
+                                              <a href="" class="social-icon">
+                                                  <i class="fab fa-facebook"></i>
+                                              </a>
+                                          </li>
+                                          <li class="social-icons-list">
+                                              <a href="" class="social-icon">
+                                                  <i class="fab fa-twitter"></i>
+                                              </a>
+                                          </li>
+                                          <li class="social-icons-list">
+                                              <a href="" class="social-icon">
+                                                  <i class="fab fa-instagram"></i>
+                                              </a>
+                                          </li>
+                                      </ul>
+                                    </div>
+                              </div>
+                          </div>
+                      </div>
                     </div>
-                  </nav>
-                  <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                        <form>
-                            <div class="input-group mb-3">
-                                <span class="input-group-text" id="basic-addon1"><i class="far fa-user"></i></span>
-                                <input type="text" class="form-control" placeholder="First & Last name" aria-label="Username" aria-describedby="basic-addon1" required>
-                              </div>
-                              <div class="input-group mb-3">
-                                <span class="input-group-text" id="basic-addon1"><i class="far fa-envelope"></i></span>
-                                <input type="text" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1" required>
-                              </div>
-                              <div class="input-group mb-3">
-                                <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
-                                <input type="text" class="form-control" placeholder="Your password" aria-label="Username" aria-describedby="basic-addon1" required>
-                              </div>
-                            <button type="submit" class="btn btn-primary">Create An Account</button>
-                          </form>
-                          <div class="social-media">
-                          <h1 class="label-text">or connect with</h1>
-                          </div>
-                          <div class="social-media-icon">
-                            <ul class="social-icons mt-3">
-                                <li class="social-icons-list">
-                                    <a href="" class="social-icon">
-                                        <i class="fab fa-linkedin-in"></i>
-                                    </a>
-                                </li>
-                                <li class="social-icons-list">
-                                    <a href="" class="social-icon">
-                                        <i class="fab fa-facebook"></i>
-                                    </a>
-                                </li>
-                                <li class="social-icons-list">
-                                    <a href="" class="social-icon">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li class="social-icons-list">
-                                    <a href="" class="social-icon">
-                                        <i class="fab fa-instagram"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                          </div>
                     </div>
-                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                        <form>
-                              <div class="input-group mb-3">
-                                <span class="input-group-text" id="basic-addon1"><i class="far fa-envelope"></i></span>
-                                <input type="text" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1" required>
-                              </div>
-                              <div class="input-group mb-3">
-                                <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
-                                <input type="text" class="form-control" placeholder="Your password" aria-label="Username" aria-describedby="basic-addon1" required>
-                              </div>
-                            <div class="d-flex justify-content-space-between">
-                            <div class="mb-3">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Remember me</label>
-                              </div>
-                              <div class="mb-3 form-check" style="margin-left: 5rem !important;">
-                                <a href="">Forget your password</a>
-                              </div>
-                              </div>
-                              <button type="submit" class="btn btn-secondary">Log In</button>
-                          </form>
-                          <div class="social-media">
-                          <h1 class="label-text">or connect with</h1>
-                          </div>
-                          <div class="social-media-icon">
-                            <ul class="social-icons mt-3">
-                                <li class="social-icons-list">
-                                    <a href="" class="social-icon">
-                                        <i class="fab fa-linkedin-in"></i>
-                                    </a>
-                                </li>
-                                <li class="social-icons-list">
-                                    <a href="" class="social-icon">
-                                        <i class="fab fa-facebook"></i>
-                                    </a>
-                                </li>
-                                <li class="social-icons-list">
-                                    <a href="" class="social-icon">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li class="social-icons-list">
-                                    <a href="" class="social-icon">
-                                        <i class="fab fa-instagram"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                          </div>
-                    </div>
-                 </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</li>
+          </li>
           <li class="nav-item mt-1" style="list-style-type:none !important">
            <i class="fas fa-search nav-link search-on"  onclick="searchInput()"> </i>
            <i class="fas fa-times nav-link search-off"  onclick="searchInput1()"> </i>
