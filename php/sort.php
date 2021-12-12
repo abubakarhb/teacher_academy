@@ -79,7 +79,7 @@ function login($admin_name, $admin_pass)
         //     echo "ch";
         include("includes/db.inc.php");
         // $dbs = ['admin','students'];
-        $query_User_re = sprintf("SELECT * FROM `admin` WHERE  `email`='{$admin_name}'");
+        $query_User_re = sprintf("SELECT * FROM `students` WHERE  `email`='{$admin_name}'");
         $User_re = mysqli_query($tap, $query_User_re) or die(mysqli_error($tap));
         if ($User_re) { #checking if connection is true
             $row_User_re = mysqli_fetch_assoc($User_re);
@@ -92,20 +92,7 @@ function login($admin_name, $admin_pass)
                     $released_data = array("status"=>2,"message"=>"Your credentials does not matches!");
                     exit(json_encode($released_data));
                 }
-            } elseif ($totalRows_User_re = 0) {
-                $query_User_re1 = sprintf("SELECT * FROM `students` WHERE  `email`='{$admin_name}'");
-                $User_re1 = mysqli_query($tap, $query_User_re1) or die(mysqli_error($tap));
-                $row_User_re1 = mysqli_fetch_assoc($User_re1);
-                $totalRows_User_re1 = mysqli_num_rows($User_re1);
-                if ($totalRows_User_re1 > 0) { #checking if row is available
-                    if (($row_User_re1['email']== $admin_name) && ($row_User_re1['password']== $admin_pass)) {
-                        $released_data = array("status"=>1,"message"=>"Logged In","username"=>$row_User_re1['email'],"fullname"=>$row_User_re1['fullname'],"adminID"=>"TAP/ST/".$row_User_re1['id']);
-                        exit(json_encode($released_data));
-                    } else { #Check password correctness
-                        $released_data = array("status"=>2,"message"=>"Your credentials does not matches!");
-                        exit(json_encode($released_data));
-                    }
-                }
+            }
             } else { #No Data Available
                 $released_data = array("status"=>0,"message"=>"Not a user, Please try to registered to help us authenticate you","username"=>$admin_name);
                 exit(json_encode($released_data));
