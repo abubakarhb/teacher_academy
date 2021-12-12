@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steamlance</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <link rel="stylesheet" href="css/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/fontawesome/css/all.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style_client.css">
+
+</head>
+
+<body onload="myFunction()">
+    <section id='loader' class="">
+        <div class="d-flex justify-content-center align-items-center">
+            <img src="./img/loader/78494-loader.gif" alt="">
+        </div>
+    </section>
+    <section class="nav2">
+    </section>
+    <div class="client">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-5 mt-5">
+                    <h3>Welcome, abubakar!</h3>
+
+
+                </div>
+                <div class="d-flex" style="justify-content:space-between !important">
+                    <p class="text-up">Here is a summary of your experience.
+                        <button class="btn btn-outline-primary mb-2 mr-2" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal" style="border-radius: 40px;">
+                            <span class="iconify" data-icon="mdi:alert-circle-outline"></span> Show me how
+                        </button>
+                        <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body" style="text-align:center;">
+                                    <h6>Welcome to your Home page!</h6>
+                                    <small>For an overview, watch this 1 min video</small>
+                                    <video id="video" controls
+                                        src="./video/Learn DOM Manipulation In 18 Minutes.mp4"></video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </p>
+                    <div class="dropdown">
+                        <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Last 30 days
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Today</a></li>
+                            <li><a class="dropdown-item" href="#">Yesterday</a></li>
+                            <li><a class="dropdown-item" href="#">Last 7 days</a></li>
+                            <li><a class="dropdown-item active" href="#">Last 30 days</a></li>
+                            <li><a class="dropdown-item" href="#">Last 60 days</a></li>
+                            <li><a class="dropdown-item" href="#">Last 90 days</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-12">
+                    <div class="test" style="height:400px">
+                        <div class="d-flex" style="justify-content:space-between">
+                            <p class="text-mute">Recent Test Attempts(0)</p>
+                            <p data-bs-toggle="modal" data-bs-target="#test"
+                                style="color: #25B4FA; cursor: pointer; margin-left: 7rem;">+ Create Test
+                                <!-- Modal -->
+                            <div class="modal fade" id="test" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body"">
+                                          <div class=" container">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <h6>Welcome Screen</h6>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <label for="select">SELECT A ROLE</label>
+                                                    <select class="form-select mt-2 "
+                                                        aria-label="Default select example">
+                                                        <option selected>Search Role</option>
+                                                        <option value="1">JavaScript Developer</option>
+                                                        <option value="2">Graphic Designer</option>
+                                                        <option value="3">Full-stack Developer</option>
+                                                    </select>
+                                                    <button class="btn btn-primary disabled mt-3">Create Test</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </p>
+                    </div>
+                    <hr>
+                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist"">
+                            <li class=" nav-item" role="presentation">
+                        <a class="nav-link" id="pills-starredtest-tab" data-bs-toggle="pill"
+                            data-bs-target="#starredtest-tab" type="button" role="tab" aria-controls="pills-home"
+                            aria-selected="true" href="#" style="color: #e0dcdc !important"><i class="fas fa-star"></i>
+                            Starred Tests</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" id="pills-alltest-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-alltest-tab" type="button" role="tab" aria-controls="pills-home"
+                                aria-selected="true" href="#" style="color: #ada9a9 !important">All Test</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade " id="starredtest-tab" role="tabpanel"
+                            aria-labelledby="pills-starredtest-tab">
+                            <div class="test-content">
+                                <i class="fas fa-star" style="color: #e0dcdc !important"></i> <br />
+                                <p>You're all caught up!</p>
+                                <small>There are no candidate attempts for your tests in this timeframe.</small> <br>
+                                <small>Unsure how to star?</small> <br>
+                               <small>Here's a <a href="http://">short tutorial</a>.</small>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade show active" id="alltest-tab" role="tabpanel"
+                            aria-labelledby="pills-alltest-tab">
+                            <div class="test-content">
+                                <p>You're all caught up!</p>
+                                <small>There are no candidate attempts for your tests in this timeframe.</small> <br>
+                                <a href="" class="btn btn-outline-primary mt-2">Go to Test</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-5 col-12" style="margin-left:5rem">
+                <div class="test" style="height:400px">
+                    <div class="d-flex" style="justify-content:space-between">
+                        <p class="text-mute">Completed Interviews</p>
+                        <p data-bs-toggle="modal" data-bs-target="#interview"
+                            style="color: #25B4FA; cursor: pointer; margin-left: 7rem;">+ Create Interview
+                            <!-- Modal -->
+                        <div class="modal fade" id="interview" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4>New Interview</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body"">
+                                        <form>
+                                            <div class=" mb-3">
+                                        <label for="exampleInputEmail1" class="form-label">Candidate's Email</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1"
+                                            aria-describedby="emailHelp">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleInputPassword1" class="form-label">Interview Title
+                                            (Optional)</label>
+                                        <input type="text" class="form-control" id="title">
+                                    </div>
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1" checked>
+                                        <label class="form-check-label" for="exampleCheck1">Show candidate timeline to
+                                            the interviewe <span class="iconify"
+                                                data-icon="mdi:alert-circle-outline"></span> </label>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary disabled">Get Interview Link</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </p>
+                </div>
+                <hr>
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist"">
+                            <li class=" nav-item" role="presentation">
+                    <a class="nav-link" id="myinterview" data-bs-toggle="pill" data-bs-target="#myinterview-tab"
+                        type="button" role="tab" aria-controls="pills-home" aria-selected="true" href="#"
+                        style="color: #e0dcdc !important"></i>My Interview (0)</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="allinterview" data-bs-toggle="pill"
+                            data-bs-target="#allinterview-tab" type="button" role="tab" aria-controls="pills-home"
+                            aria-selected="true" href="#" style="color: #ada9a9 !important">All Interviews (0)</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade " id="myinterview-tab" role="tabpanel" aria-labelledby="myinterview">
+                        <div class="test-content">
+                            <p>Let's get started!</p>
+                            <small>You haven’t created any interviews, click below to make your first one.</small> <br>
+                            <a href="" class="btn btn-primary mt-2">+ Create Interview</a>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade show active" id="allinterview-tab" role="tabpanel"
+                        aria-labelledby="allinterview">
+                        <div class="test-content">
+                            <p>Let's get started!</p>
+                            <small>You haven’t created any interviews, click below to make your first one.</small> <br>
+                            <a class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#interview">+ Create
+                                Interview</a>
+                            <!-- Modal -->
+                            <div class="modal fade" id="interview" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4>New Interview</h4>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body"">
+                                                                    <form>
+                                                                        <div class=" mb-3">
+                                            <label for="exampleInputEmail1" class="form-label">Candidate's Email</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                                aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleInputPassword1" class="form-label">Interview Title
+                                                (Optional)</label>
+                                            <input type="text" class="form-control" id="title">
+                                        </div>
+                                        <div class="mb-3 form-check">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck1" checked>
+                                            <label class="form-check-label" for="exampleCheck1">Show candidate timeline
+                                                to the interviewe <span class="iconify"
+                                                    data-icon="mdi:alert-circle-outline"></span> </label>
+                                        </div>
+                                        <button type="submit" class="btn btn-dark disabled">Get Interview
+                                            Link</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-lg-5 col-12 mt-5">
+        <div class="test" style="height:400px">
+            <p class="text-mute">
+                Share Your Feedback
+            </p>
+            <hr>
+            <small>We’d like to customize your Home page for you.</small> <br>
+            <small>What’s most important for you to see when you login?</small>
+            <div class="mb-3 mt-3">
+                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="I'd like to see" rows="4"
+                    style="height: 150px;"></textarea>
+            </div>
+            <button class="btn btn-dark disabled">Submit Request</button>
+
+
+        </div>
+    </div>
+    </div>
+
+    <section class="footer1 mt-5 mb-3" style="background-color:#39424e;">
+    </section>
+    <script src="js/jquery.js"></script>
+    <script src="css/dist/js/bootstrap.bundle.js"></script>
+    <script src="css/dist/js/script.js"></script>
+    <script src="js/headerClient.js"></script>
+</body>
+
+</html>

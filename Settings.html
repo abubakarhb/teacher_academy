@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Steamlance</title>
+  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+  <link rel="stylesheet" href="css/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="css/fontawesome/css/all.css" />
+  <link rel="stylesheet" href="css/style2.css" />
+</head>
+
+<body onload="myFunction()">
+  <section id='loader' class="">
+    <div class="d-flex justify-content-center align-items-center">
+      <img src="./img/loader/78494-loader.gif" alt="">
+    </div>
+  </section>
+  <section class="nav2"></section>
+  <section class="setting">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-3 set">
+                  <h4>ACCOUNT</h4>
+                    <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                      <button class="nav-link active" id="v-pills-Setting-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Setting" type="button" role="tab" aria-controls="v-pills-Setting" aria-selected="true">Settings</button>
+                      <button class="nav-link" id="v-pills-Teams-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Teams" type="button" role="tab" aria-controls="v-pills-Teams" aria-selected="false">Teams</button>
+                      <button class="nav-link" id="v-pills-Passwords-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Passwords" type="button" role="tab" aria-controls="v-pills-Passwords" aria-selected="false">Password</button>
+                      <button class="nav-link" id="v-pills-Shipping-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Shipping" type="button" role="tab" aria-controls="v-pills-Shipping" aria-selected="false">Shipping Details</button>
+                      <button class="nav-link" id="v-pills-Phone-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Phone" type="button" role="tab" aria-controls="v-pills-Phone" aria-selected="false">Phone</button>
+                      <h4 class="mt-3 mb-2">PREFERENCES</h4>
+                        <button class="nav-link" id="v-pills-Emails-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Emails" type="button" role="tab" aria-controls="v-pills-Emails" aria-selected="true">Emails</button>
+                      <button class="nav-link" id="v-pills-Language-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Language" type="button" role="tab" aria-controls="v-pills-Language" aria-selected="false">Language</button>
+                      <button class="nav-link" id="v-pills-Personalization-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Personalization" type="button" role="tab" aria-controls="v-pills-Personalization" aria-selected="false">Personalization</button>
+                      <button class="btn btn-outline-success mt-3 mb-3" style="width:150px">Save Changes</button>
+              </div>
+            </div>
+              <div class="col-lg-9">
+                <div class="tab-content" id="v-pills-tabContent">
+                  <div class="tab-pane fade show active" id="v-pills-Setting" role="tabpanel" aria-labelledby="v-pills-Setting-tab"> 
+                    <h6>Your Username</h6>
+                    <small>(This is how users will see you on Steamlance.)</small>
+                    <input type="text" class="form-control mt-3" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" style="width:500px">
+                    <hr>
+                    <h5>Email Addresses</h5>
+                    <small class="faded">We will never share your email address or display it publicly.</small>
+                    <div class="d-flex mail-verified mt-4">
+                      <p class="mail">hhhhh@gamil.com</p>
+                      <a class="btn btn-outline-success">verified</a>
+                      <a class="btn btn-dark">primary</a>
+                    </div>
+                    <button class="btn btn-light mt-2 adding">+ Add another email</button>
+                    <div class="addAcct d-flex mt-2"></div>
+                    <hr>
+                    <h5>Connected Accounts</h5>
+                    <small class="faded">Connect your other accounts with Steamlance to share your progress and scores and find your friends.</small> <br>
+                    <button class="btn btn-primary mt-2"> <i class="fab fa-facebook"></i> Connect to Facebook</button> <br>
+                    <button class="btn btn-primary mt-2"> <i class="fab fa-linkedin-in"></i> Connect to LinkedIn</button>
+                  </div>
+                  <div class="tab-pane fade" id="v-pills-Teams" role="tabpanel" aria-labelledby="v-pills-Teams-tab">
+                    <h4>Manage Your Teams</h4>
+                    <small class="fadeds">If you'd like to participate in a team contest, you can create or modify your team here.
+                      You can only create a team for a team contest.</small> <br>
+                      <button class="btn btn-primary btC mt-2">Create Team</button>
+                      <hr>
+                      <div class="headings">
+                        <h5>Team Name</h5>
+                        <h5>Contest Name</h5>
+                        <h5>Status</h5>
+                        <h5>Team Information</h5>
+                      </div>
+                      <p class="fadeds mt-2">You have not created or been invited to any teams.</p>
+                  </div>
+                  <div class="tab-pane fade" id="v-pills-Passwords" role="tabpanel" aria-labelledby="v-pills-Passwords-tab">
+                    <h5 style="font-size:30px">Password</h5>
+                    <small style="font-size:15px">Enter your current Steamlance password along with a new one to change it.</small>
+                    <div class="mb-3 mt-3">
+                      <label for="Cpassword" class="form-label">Current Password</label>
+                      <input type="password" class="form-control" id="Cpassword" placeholder="Enter Current password" style="width:300px">
+                    </div>
+                    <div class="allPass d-flex">
+                      <div class="mb-3">
+                        <label for="Cpassword" class="form-label">New Password</label>
+                        <input type="password" class="form-control" id="newpassword" placeholder="Enter Current password" style="width:300px">
+                      </div>
+                      <div class="mb-3" style="margin-left: 2rem!important;">
+                        <label for="Cpassword" class="form-label">Confirm New Password</label>
+                        <input type="password" class="form-control" id="confirmnewpassword" placeholder="Re-enter new password" style="width:300px">
+                      </div>
+                    </div>
+                    <button class="btn btn-light">Change Password</button>
+                  </div>
+                  <div class="tab-pane fade" id="v-pills-Shipping" role="tabpanel" aria-labelledby="v-pills-Shipping-tab">
+                    <h3>Shipping Details</h3>
+                    <small class="fadeds">Please provide us your shipping information so we can deliver your prize to you promptly.</small>
+                    <div class="form mt-4" style="width:500px">
+                      <label for="Tshirt" class="form-label">T-shirt Size <span style="color:red">*</span> </label>
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected>---</option>
+                        <option value="1">S</option>
+                        <option value="2">M</option>
+                        <option value="3">L</option>
+                        <option value="4">XL</option>
+                        <option value="5">XXL</option>
+                      </select>
+                      <div class="mb-3 mt-3">
+                        <label for="Address" class="form-label">Address line 1<span style="color:red">*</span></label>
+                      <input type="text" class="form-control mt-3" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" style="width:500px">
+                    </div>
+                    <div class="mb-3">
+                      <label for="Address" class="form-label">Address line 2 (optional) </label>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" style="width:500px">
+                  </div>
+                  <div class="mb-3">
+                    <label for="city" class="form-label">City<span style="color:red">*</span> </label>
+                  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" style="width:500px">
+                </div>
+                <div class="mb-3">
+                  <label for="State" class="form-label">State/Province/Region<span style="color:red">*</span> </label>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" style="width:500px">
+              </div>
+              <div class="mb-3">
+                <label for="zip" class="form-label">ZIP/Poster code<span style="color:red">*</span> </label>
+              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" style="width:500px">
+            </div>
+            <label for="Tshirt" class="form-label">State<span style="color:red">*</span> </label>
+            <select class="form-select state"  required>
+              <option disabled selected>---</option>
+              <option value="Abia">Abia</option>
+              <option value="Adamawa">Adamawa</option>
+              <option value="Akwa Ibom">Akwa Ibom</option>
+              <option value="Anambra">Anambra</option>
+              <option value="Bauchi">Bauchi</option>
+              <option value="Bayelsa">Bayelsa</option>
+              <option value="Benue">Benue</option>
+              <option value="Borno">Borno</option>
+              <option value="Cross Rive">Cross River</option>
+              <option value="Delta">Delta</option>
+              <option value="Ebonyi">Ebonyi</option>
+              <option value="Edo">Edo</option>
+              <option value="Ekiti">Ekiti</option>
+              <option value="Enugu">Enugu</option>
+              <option value="FCT">Federal Capital Territory</option>
+              <option value="Gombe">Gombe</option>
+              <option value="Imo">Imo</option>
+              <option value="Jigawa">Jigawa</option>
+              <option value="Kaduna">Kaduna</option>
+              <option value="Kano">Kano</option>
+              <option value="Katsina">Katsina</option>
+              <option value="Kebbi">Kebbi</option>
+              <option value="Kogi">Kogi</option>
+              <option value="Kwara">Kwara</option>
+              <option value="Lagos">Lagos</option>
+              <option value="Nasarawa">Nasarawa</option>
+              <option value="Niger">Niger</option>
+              <option value="Ogun">Ogun</option>
+              <option value="Ondo">Ondo</option>
+              <option value="Osun">Osun</option>
+              <option value="Oyo">Oyo</option>
+              <option value="Plateau">Plateau</option>
+              <option value="Rivers">Rivers</option>
+              <option value="Sokoto">Sokoto</option>
+              <option value="Taraba">Taraba</option>
+              <option value="Yobe">Yobe</option>
+              <option value="Zamfara">Zamfara</option>
+              </select>
+              <div class="mb-3 mt-3">
+                <label for="phn" class="form-label">Phone number<span style="color:red">*</span> </label>
+              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" style="width:500px">
+            </div>
+                  </div>
+                  </div>
+                  <div class="tab-pane fade" id="v-pills-Phone" role="tabpanel" aria-labelledby="v-pills-Phone-tab">
+                    <h3 style="font-weight: bolder;">Verify Your Phone Number</h3>
+                    <p class="fadeds">Enter your mobile number to verify your account.</p>
+                    <div class="mb-3 mt-3">
+                      <label for="phone" class="form-label">Phone Number</label>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" style="width:300px">
+                  </div>
+                  <button class="btn btn-light disabled" style="width:100px">Verify</button>
+                  </div>
+                  <div class="tab-pane fade" id="v-pills-Emails" role="tabpanel" aria-labelledby="v-pills-Emails-tab">
+                    <div class="sub">
+                      <h2>Email Notifications</h2>
+                      <p style="color: #1877F2; cursor: pointer; font-size: 20px; font-weight: bold">Subscribe All</p>
+                    </div>
+                    <p class="faded mt-1 mb-2">You can update your email preferences here by choosing the specific categories for which you would like to be notified.</p>
+                    <div class="subAll mt-3">
+                      <h6>Contest Recommendations</h6>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                      </div>
+                    </div>
+                    <div class="subAll mt-3">
+                      <h6>Challenge and Track Recommendations</h6>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                      </div>
+                    </div>
+                    <div class="subAll mt-3">
+                      <h6>Job Recommendations</h6>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                      </div>
+                    </div>
+                    <div class="subAll mt-3">
+                      <h6>Surveys, Marketing Emails and Promotions</h6>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                      </div>
+                    </div>
+                    <div class="subAll mt-3">
+                      <h6>Special Previews</h6>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                      </div>
+                    </div>
+                    <div class="subAll mt-3">
+                      <h6>Contest Updates and Reminders</h6>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                      </div>
+                    </div>
+                    <div class="subAll mt-3">
+                      <h6>Social Updates</h6>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                      </div>
+                    </div>
+                    <div class="subAll mt-3">
+                      <h6>Tutorial Emails</h6>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                      </div>
+                    </div>
+                    <div class="subAll mt-3">
+                      <h6>Product Announcement.</h6>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="v-pills-Language" role="tabpanel" aria-labelledby="v-pills-Language-tab">
+                    <h4>Language</h4>
+                    <p>We will use your preferred language to display problem statement wherever possible.</p>
+                    <label for="phone" class="form-label mt-4">Language</label>
+                   <select class="form-select lang"  required style="width: 400px;">
+                    <option disabled selected>---</option>
+                    <option value="English">English</option>
+                    <option value="Hausa">Hausa</option>
+                    <option value="Yoruba">Yoruba</option>
+                    <option value="Igbo">Igbo</option>
+                    </select>
+                    <button class="btn btn-light mt-3" style="width:100px">Save Changes</button>
+                  </div>
+                  <div class="tab-pane fade" id="v-pills-Personalization" role="tabpanel" aria-labelledby="v-pills-Personalization-tab">
+                    <h4>Personalization Goals</h4>
+                    <p>Select your preferences to personalize your recommendations.</p>
+                    <label class="mb-1"> I am here to</label>
+                    <div class="allcheck mt-2 d-flex">
+                      <div class="form-check"   onclick="addCheck()">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                        <label class="form-check-label" for="flexRadioDefault1" style="cursor: pointer;"> Prepare for Job Interviews</label>
+                    </div>
+                    <div class="form-check" style="margin-left: 2rem;" onclick="removeCheck()">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                      <label class="form-check-label" for="flexRadioDefault2" style="cursor: pointer;"> Learn & Compete with Others</label>
+                  </div>
+                    </div>
+                  <div class="inteview mt-3">
+                    <label class="mb-2"> I am here to</label>
+                    <select class="form-select interview"  required style="width: 400px;">
+                      <option value="week">a week</option>
+                      <option value="month">a month</option>
+                      <option value="3month">3 months</option>
+                      <option value="months">more than 3 months</option>
+                      </select>
+                      <div class="form-check mt-3">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                          I am interested in being contacted about job opportunities.
+                        </label>
+                      </div>
+                  </div>
+                  <button class="btn btn-primary mt-3" style="width:80px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;">Save</button>
+                </div>
+                 
+              </div>
+          </div>
+      </div>
+  </section>
+  <section class="footer1 mt-5 mb-3"></section>
+  <script type="text/javascript">
+    let addEmail =document.querySelector('.adding');
+    let addAcct =document.querySelector('.addAcct')
+    addEmail.addEventListener("click", function(){
+      addAcct.innerHTML +=`
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" style="width:300px">
+                    <a class="btn btn-outline-success">Add</a>
+                    <a class="btn btn-dark" onclick="cancelInput()">Cancel</a>
+         `;
+         addEmail.style.display="none";
+});
+    
+
+
+function cancelInput() {
+  document.querySelector('.addAcct').classList.add("Acct1")
+  document.querySelector('.adding').style.display = "block";
+}
+
+function removeCheck(){
+  document.querySelector('.inteview').style.display="none";
+}
+
+function addCheck(){
+  document.querySelector('.inteview').style.display="block";
+}
+  </script>
+  <script src="js/jquery.js"></script>
+  <script src="css/dist/js/bootstrap.js"></script>
+  <script src="css/dist/js/script.js"></script>
+  <script src="js/header2.js"></script>
+</body>
+
+</html>

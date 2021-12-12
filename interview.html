@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steamlance</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <link rel="stylesheet" href="css/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/fontawesome/css/all.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style_client.css">
+
+</head>
+
+<body onload="myFunction()">
+    <section id='loader' class="">
+        <div class="d-flex justify-content-center align-items-center">
+            <img src="./img/loader/78494-loader.gif" alt="">
+        </div>
+    </section>
+    <section class="nav2">
+    </section>
+    <section class="interview">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-12">
+                    <p class="textP">Hey abubakar, you have <br>
+                        <span>unlimited interview sessions</span> <br>
+                        during your trial. <br>
+                        Let’s get started!
+                    </p>
+                    <p class="textPP">Combine a live webcam session with your <br>
+                        candidate while they complete code challenges</p>
+                    <small>It gives you unique insight into the candidate’s technical skill and coding style at the same
+                        time.
+                        Plus, for candidates who are remote,
+                        you’ll save a bundle by limiting onsite interviews to those who have already
+                        showcased their talent over an interview on Steamlance.</small>
+                    <a class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#interview">+ Create a New
+                        Interview</a>
+                    <div class="modal fade" id="interview" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4>New Interview</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body"">
+                                                                    <form>
+                                                                        <div class=" mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Candidate's Email</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">Interview Title
+                                        (Optional)</label>
+                                    <input type="text" class="form-control" id="title">
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1" checked>
+                                    <label class="form-check-label" for="exampleCheck1">Show candidate timeline
+                                        to the interviewe <span class="iconify"
+                                            data-icon="mdi:alert-circle-outline"></span> </label>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Get interview link</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-12">
+                <div class="video-side">
+                    <video id="video" controls src="./video/Learn DOM Manipulation In 18 Minutes.mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="footer1 mt-5 mb-3" style="background-color:#39424e; margin-top: 8rem !important; padding: 5px;">
+    </section>
+    <script src="js/jquery.js"></script>
+    <script src="css/dist/js/bootstrap.bundle.js"></script>
+    <script src="css/dist/js/script.js"></script>
+    <script src="js/headerClient.js"></script>
+</body>
+
+</html>
