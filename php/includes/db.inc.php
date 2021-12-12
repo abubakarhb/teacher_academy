@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <?php
     $hostname_eva = "localhost";
     $database_eva = "teacher-academy";
