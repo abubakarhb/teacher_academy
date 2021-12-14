@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steamlance</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <link rel="stylesheet" href="css/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/fontawesome/css/all.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style_client.css">
+
+</head>
+
+<body onload="myFunction()">
+    <section id='loader' class="">
+        <div class="d-flex justify-content-center align-items-center">
+            <img src="./img/loader/78494-loader.gif" alt="">
+        </div>
+    </section>
+    <section class="nav2">
+    </section>
+    <section class="heading d-flex">
+        <button class="btn btn-primary"> Create Question</button>
+    </section>
+    <section class="library">
+        <div class="row">
+            <div class="col-lg-3 col-12">
+                <div class="dashboard">
+                    <div class="input-group mb-3 mt-4" style="width:250px !important">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
+                        <input type="text" class="form-control" placeholder="Search for a test.." aria-label="name"
+                            aria-describedby="basic-addon1">
+                    </div>
+                    <select class="form-select mb-2" aria-label="Default select example" style="width:250px !important">
+                        <option selected>Select Job Role</option>
+                        <option value="1">Back-End Developer</option>
+                        <option value="2">Front-End Developer</option>
+                        <option value="3">Graphics Designer</option>
+                        <option value="4">Data Scientist</option>
+                    </select>
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    SKILLS
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p class="" data-bs-toggle="modal" data-bs-target="#interview"
+                                        style="color:#25B4FA; cursor:pointer"> + Create New Label</p>
+                                    <div class="modal fade" id="interview" tabindex="-1"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h4>Create New Label</h4>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body"">
+                                                                    <form>
+                                                                        <div class=" mb-3">
+                                                    <input type="text" class="form-control" id="exampleInputEmail1"
+                                                        aria-describedby="emailHelp">
+                                                </div>
+                                                <button type="submit" class="btn btn-dark disabled">Save</button>
+                                                <button type="submit" class="btn btn-dark">Cancel</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="Starred">
+                                    <label class="form-check-label" for="Starred">Angular Basic</label>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="Draft">
+                                    <label class="form-check-label" for="Draft">HTML</label>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="Unlabelled">
+                                    <label class="form-check-label" for="Unlabelled">Javascript</label>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="SoftwareD">
+                                    <label class="form-check-label" for="SoftwareD">Python</label>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="SoftwareE">
+                                    <label class="form-check-label" for="SoftwareE">CSS</label>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="graphics">
+                                    <label class="form-check-label" for="SoftwareE">Graphics</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                DIFFICULTY
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="Easy">
+                                    <label class="form-check-label" for="tests">Easy</label>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="Medium">
+                                    <label class="form-check-label" for="SharedW">Medium</label>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="Hardr">
+                                    <label class="form-check-label" for="Filter">Hard</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                TYPE
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="Coding">
+                                    <label class="form-check-label" for="SoftwareE">Coding</label>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="Multiple>
+                                    <label class=" form-check-label" for="SoftwareE">Multiple Choice</label>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="CompleteS">
+                                    <label class="form-check-label" for="SoftwareE">Complete Sentence</label>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="Database">
+                                    <label class="form-check-label" for="SoftwareE">Database</label>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="BackendD">
+                                    <label class="form-check-label" for="SoftwareE">Back-end Developer</label>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="FrontendD">
+                                    <label class="form-check-label" for="SoftwareE">Front-end Developer</label>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="HTML">
+                                    <label class="form-check-label" for="SoftwareE">HTML/CSS/JavaScript</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingfour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapsefour" aria-expanded="false"
+                                aria-controls="flush-collapsefour">
+                                RECOMMENDED TIME
+                            </button>
+                        </h2>
+                        <div id="flush-collapsefour" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingfour" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div class="mb-3 form-check">
+                                    <input type="range" class="form-range" id="customRange1">
+                                    <label for="customRange1" class="form-label d-flex"
+                                        style="justify-content:space-between">
+                                        <small>0 mins</small>
+                                        <small>>200 mins</small>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingfive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapsefive" aria-expanded="false"
+                                aria-controls="flush-collapsefive">
+                                TAGS
+                            </button>
+                        </h2>
+                        <div id="flush-collapsefive" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingfive" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="net">
+                                    <label class="form-check-label" for="Starred">
+                                        .NET</label>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id=".NETCore">
+                                    <label class="form-check-label" for="Draft">.NET Core 3.0</label>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="ALB">
+                                    <label class="form-check-label" for="Unlabelled">ALB</label>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="API">
+                                    <label class="form-check-label" for="SoftwareD">API</label>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="AWS">
+                                    <label class="form-check-label" for="SoftwareE">AWS</label>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="Algorithms">
+                                    <label class="form-check-label" for="SoftwareE">Algorithms</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingsix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapsesix" aria-expanded="false" aria-controls="flush-collapsesix">
+                            LANGUAGES
+                        </button>
+                    </h2>
+                    <div id="flush-collapsesix" class="accordion-collapse collapse" aria-labelledby="flush-headingsix"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="BASH">
+                                <label class="form-check-label" for="years">BASH</label>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="C">
+                                <label class="form-check-label" for="Starred">
+                                    C</label>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="C#">
+                                <label class="form-check-label" for="Draft">C#</label>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="C++">
+                                <label class="form-check-label" for="Unlabelled">C++</label>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="CSS">
+                                <label class="form-check-label" for="SoftwareD">CSS</label>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="Go">
+                                <label class="form-check-label" for="SoftwareE">Go</label>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="JavaScript">
+                                <label class="form-check-label" for="SoftwareE">JavaScript</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingseven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseseven" aria-expanded="false"
+                                aria-controls="flush-collapseseven">
+                                OTHER FILTERS
+                            </button>
+                        </h2>
+                        <div id="flush-collapseseven" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingseven" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="years" checked>
+                                    <label class="form-check-label" for="years">Hide Leaked Questions</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-9 col-12">
+            <div class="dash-content mt-2">
+                <div class="d-flex mt-3" style="justify-content: space-between;">
+                    <div class="d-flex" style="justify-content: space-between;">
+                        <small>338 QUESTIONS</small>
+                        <small style="margin-left: 4rem;">Status</small>
+                    </div>
+                    <div class="d-flex" style="justify-content: space-between;">
+                        <small class="mt-2"> Sort by:</small>
+                        <select class="form-select" aria-label="Default select example"
+                            style="width:200px !important; margin-left: .5rem;">
+                            <option selected>Relevance</option>
+                            <option value="1">Newest</option>
+                            <option value="2">Recommended Time (Shortest)</option>
+                        </select>
+                    </div>
+                </div>
+                <hr>
+                <div class=" form-check ">
+                    <input type="checkbox" class="form-check-input" id="years">
+                    <label class="form-check-label mt-3" for="years" style="font-size: 18px">Skip A Level </label>
+                </div>
+                <small style="padding-left: 25px;">Skill: Problem Solving</small>
+                <div class="d-flex" style="width:500px; justify-content: space-between; padding-left: 25px;">
+                    <small class="mt-1"> Type : Coding</small>
+                    <small class="mt-1"> Score : 50</small>
+                    <small class="mt-1"> Recommended Time : 93 mins</small>
+                </div>
+                <small class="mt-1" style="padding-left: 25px;">Tags:Arrays,Greedy Algorithms,Interviewer
+                    Guidelines</small>
+                <hr>
+                <div class=" form-check ">
+                    <input type="checkbox" class="form-check-input" id="years">
+                    <label class="form-check-label mt-3" for="years" style="font-size: 18px">Skip A Level </label>
+                </div>
+                <small style="padding-left: 25px;">Skill: Problem Solving</small>
+                <div class="d-flex" style="width:500px; justify-content: space-between; padding-left: 25px;">
+                    <small class="mt-1"> Type : Coding</small>
+                    <small class="mt-1"> Score : 50</small>
+                    <small class="mt-1 mb-3"> Recommended Time : 93 mins</small>
+                </div>
+                <small class="mt-1" style="padding-left: 25px;">Tags:Arrays,Greedy Algorithms,Interviewer
+                    Guidelines</small>
+                <hr>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+    <section class="footer1 mt-5 mb-3" style="background-color:#39424e;">
+    </section>
+    <script src="js/jquery.js"></script>
+    <script src="css/dist/js/bootstrap.bundle.js"></script>
+    <script src="css/dist/js/script.js"></script>
+    <script src="js/headerClient.js"></script>
+</body>
+
+</html>

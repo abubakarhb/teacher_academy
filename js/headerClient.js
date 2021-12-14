@@ -1,6 +1,14 @@
+$(function () {
+  let urll = location.pathname.split("/")
+  $('.menuUl a[href="' + urll[urll.length - 1] + '"]').addClass('active');
+  console.log(urll[urll.length - 1])
+  // console.log('.menuUl a[href^="/' + location.pathname.split("/")[2] + '"]')
+});
+
+
 let nav2 = document.querySelector('.nav2')
 nav2.innerHTML +=`
-<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light bg-dark menuUl">
   <div class="container">
     <a class="navbar-brand pr-0" href="client_home.html" id="home" style="color:#f7f7f7"><img src="./" width="20%" alt="">Steamlance</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,16 +17,16 @@ nav2.innerHTML +=`
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="developer.html">CANDIDATES</a>
+              <a class="nav-link" href="candidate.html">CANDIDATES</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="certify.html">TEST</a>
+              <a class="nav-link" href="tests.html">TEST</a>
             </li>
             <li class="nav-item">
           <a class="nav-link" href="interview.html">INTERVIEWS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Jobs.html">LIBRARY</a>
+          <a class="nav-link" href="library.html">LIBRARY</a>
         </li>
         <li class="nav-item">
         <a class="nav-link" href="pricing.html">PRICING</a>

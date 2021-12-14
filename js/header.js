@@ -1,3 +1,11 @@
+// $(function () {
+//     $('.menuUl a[href="' + location.pathname.split("/")[3] + '"] .navo-items').addClass('active');
+//     // console.log('.menuUl a[href^="/' + location.pathname.split("/")[2] + '"]')
+// });
+
+
+
+
 let search11 = document.querySelector('.search');
           search11.innerHTML +=`
           <div class="row">
@@ -273,11 +281,11 @@ nav.innerHTML +=`
                                   <form class="signinForm">
                                         <div class="input-group mb-3">
                                           <span class="input-group-text" id="basic-addon1"><i class="far fa-envelope"></i></span>
-                                          <input type="text" class="form-control Username" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1" required>
+                                          <input type="text" class="form-control username" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1" required>
                                         </div>
                                         <div class="input-group mb-3">
                                           <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
-                                          <input type="text" class="form-control password" placeholder="Your password" aria-label="password" aria-describedby="basic-addon1" required>
+                                          <input type="text" class="form-control passlogin" placeholder="Your password" aria-label="password" aria-describedby="basic-addon1" required>
                                         </div>
                                       <div class="d-flex justify-content-space-between">
                                       <div class="mb-3">
@@ -288,6 +296,7 @@ nav.innerHTML +=`
                                           <a href="">Forget your password</a>
                                         </div>
                                         </div>
+                                        <div class="loading-box"></div>
                                         <button type="submit" class="btn btn-secondary" id="loginAccount">Log In</button>
                                     </form>
                                     <div class="social-media">

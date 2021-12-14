@@ -815,10 +815,10 @@ padding-top: 20px;
       margin: 20px 20px 20px 25px;
     }
     #loader{
-      position: absolute;
+      position: fixed;
       background-color: #fff;
       width: 100vw;
-      height: 100vh;
+      height: 100%;
       z-index:1000;
       overflow: hidden;
       

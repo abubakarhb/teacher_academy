@@ -1,6 +1,7 @@
 const loginAccountBtn = document.getElementById("loginAccount");
 
 loginAccountBtn.addEventListener("click", function (e) {
+  
   e.preventDefault();
 
   $(".loading-box").html(
@@ -8,7 +9,7 @@ loginAccountBtn.addEventListener("click", function (e) {
   );
 
   let user = document.querySelector(".username").value;
-  let pin = document.querySelector(".password").value;
+  let pin = document.querySelector(".passlogin").value;
   //   let pwd = document.querySelector('.pwd').value
   //   let phone = document.querySelector('.phone').value
   //   let loc = document.querySelector('.loc').value
@@ -39,12 +40,9 @@ loginAccountBtn.addEventListener("click", function (e) {
   //     .catch((error) => { console.log(error) })
 
   async function loginAccount() {
-    const response = await fetch(
-      `http://localhost:8080/teacher_academy/php/?triggerReg&fname=${fname}&email=${email}&pwd=${pwd}&phone=${phone}&loc=${loc}&city=${city}&orgId=${orgId}&jobTitle=${jobTitle}&jobPosition=${jobPosition}&photo=${data.url_preview}`,
-      {
+    const response = await fetch(`http://localhost:81/teacher_academy-main/php?login&user=${user}&pass=${pin}`,{
         method: "GET",
-      }
-    );
+      });
 
     const credentials = await response.json();
     console.log(credentials);
@@ -57,6 +55,7 @@ loginAccountBtn.addEventListener("click", function (e) {
         </div>
         
         `);
+        window.location.href ="Developer.html"
     } else if (credentials.status === -1) {
       $(".loading-box").html(`
           <p class="text-danger">Invalid User Account</p>

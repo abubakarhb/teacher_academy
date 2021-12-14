@@ -1,6 +1,15 @@
+$(function () {
+  let urll = location.pathname.split("/")
+  $('.menuUl a[href="' + urll[urll.length - 1] + '"]').addClass('active');
+  console.log(urll[urll.length - 1])
+  // console.log('.menuUl a[href^="/' + location.pathname.split("/")[2] + '"]')
+});
+
+
+
 let nav2 = document.querySelector('.nav2');
 nav2.innerHTML +=`
-<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light bg-dark menuUl">
   <div class="container">
     <a class="navbar-brand pr-0" href="" id="home"><img src="./" width="20%" alt=""></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
